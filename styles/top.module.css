@@ -1,0 +1,191 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  height: 65vh;
+  position: relative;
+}
+
+.lhs {
+  height: 100%;
+  flex: 2;
+  width: 100%;
+  position: relative;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.img img {
+  height: 100%;
+  width: 100%;
+}
+
+.rhs {
+  flex: 1.1;
+  padding: 4em;
+  position: relative;
+  height: 100%;
+}
+
+.rhs h1 {
+  font-size: 2.4em;
+}
+
+.rhs p {
+  color: hsl(0, 0%, 63%);
+  font-size: 16px;
+  margin: 1em 0;
+  letter-spacing: 0.4px;
+  line-height: 1.2em;
+}
+
+.active {
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: fadeIn 0.5s linear cubic-bezier(0.445, 0.05, 0.55, 0.95) !important;
+}
+
+.rhs h4 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.7em;
+  margin: 1em 0;
+  cursor: pointer;
+  position: relative;
+  width: 80%;
+  display: inline-block;
+}
+
+.rhs h4::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 10px;
+  position: absolute;
+  background: #000;
+  bottom: 0;
+  left: 0;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  top: 30px;
+}
+
+.rhs h4:hover::after {
+  width: 58%;
+}
+
+.rhs h4:hover span {
+  margin-left: 2.5em;
+}
+
+.rhs h4 span {
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-left: 1.5em;
+}
+
+.arrow_ctn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  display: flex;
+}
+
+.arrow_ctn img {
+  padding: 1.23em 1.67em;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.arrow_ctn img:hover {
+  background: hsl(0, 0%, 27%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .img {
+    height: 60vh;
+    width: 100%;
+  }
+
+  .rhs {
+    padding: 2em;
+  }
+
+  .rhs h1 {
+    font-size: 2.3em;
+  }
+
+  .rhs h4 {
+    width: 100%;
+  }
+
+  .arrow_ctn {
+    top: -20%;
+    bottom: 100%;
+    right: 0;
+    left: auto;
+  }
+
+  .arrow_ctn img {
+    padding: 1.5em;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .img {
+    height: 60vh;
+    width: 100%;
+  }
+
+  .rhs {
+    padding: 3.5em;
+  }
+
+  .rhs h1 {
+    font-size: 1.9em;
+  }
+
+  .arrow_ctn {
+    top: -30%;
+    bottom: 100%;
+    right: 0;
+    left: auto;
+  }
+
+  .arrow_ctn img {
+    padding: 1em 2em;
+  }
+}
+
+@media screen and (min-width: 787px) and (max-width: 1024px) {
+  .rhs h1 {
+    font-size: 1.9em;
+  }
+  .rhs {
+    padding: 1.5em;
+  }
+
+  .lhs {
+    flex: 1.4;
+  }
+}
