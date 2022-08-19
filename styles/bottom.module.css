@@ -39,7 +39,7 @@
   .inner {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    margin-top: 5.5em;
+    margin-top: 7em;
   }
 
   .about_ctn {
